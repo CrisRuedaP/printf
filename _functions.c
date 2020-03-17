@@ -58,7 +58,7 @@ return (1);
  */
 int d_type_i(va_list args)
 {
-unsigned int i, num, large_num, digit;
+int i, num, large_num, digit;
 int n, c = 0;
 
 n = va_arg(args, int);
