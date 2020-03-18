@@ -40,3 +40,5 @@ The project structure is based on programming techniques such as structures / ty
 ### Tecnologies used
 
 > C programming lenguage, Shell and Linux.
+
+> Copy-right: Todos los deredechos reservados.
