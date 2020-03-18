@@ -1,7 +1,5 @@
 #include "holberton.h"
-#include <stdarg.h>
-#include <stdio.h>
-#include <unistd.h>
+
 /**
  * _printf - function that produces output according to a format.
  * @format: a character string
@@ -25,7 +23,7 @@ return (-1);
 
 while (format != '\0' && format[i] != '\0')
 {
-if (format[i] == '%')
+  if (format[i] == '%')
 {
 i++;
 if (format[i] == '\0')
