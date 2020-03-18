@@ -27,7 +27,7 @@ char *str;
 str = va_arg(args, char*);
 
 if (str == NULL)
-return "(null)";
+str = "(null)";
 
 while (str[i] != '\0')
 {
