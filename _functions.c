@@ -21,7 +21,7 @@ return (1);
  */
 int d_type_s(va_list args)
 {
-int i = 0;
+int c, i = 0;
 char *str;
 
 str = va_arg(args, char*);
@@ -29,13 +29,16 @@ str = va_arg(args, char*);
 if (str == NULL)
 str = "(null)";
 
-while (str[i] != '\0')
+while (*str != '\0')
 {
-_putchar(str[i]);
-i++;
+i = _putchar(*str);
+if (i == -1)
+return (-1);
+c++;
+str++;
 }
 
-return (i);
+return (c);
 }
 
 /**
@@ -84,3 +87,5 @@ num = num / 10;
 }
 return (len);
 }
+
+
