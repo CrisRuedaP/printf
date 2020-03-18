@@ -58,17 +58,16 @@ return (1);
  */
 int d_type_i(va_list args)
 {
-int i, num, large_num, digit;
-int n, c = 0;
+int i, num, large_num, digit, n, c = 0;
 
 n = va_arg(args, int);
 
 large_num = n;
 if (n < 0)
 {
-c++;
-large_num = large_num * (-1);
 putchar('-');
+large_num = large_num * (-1);
+c++;
 }
 
 if (large_num == 0)
