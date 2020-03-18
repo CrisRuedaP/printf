@@ -1,0 +1,74 @@
+./" this is the manpage of the _printf function 
+./ Contact 1484@holbertonschool.com to correct errors or suggestion.
+
+.TH _printf()  "2020-03-17" "v1.0" "_printf function man page"
+
+.SH NAME
+_printf - format and print data
+
+.SH DESCRIPTION
+This function is very used to print data type at the standard output (stdout).
+
+The _printf function (print formatted) prints a string on the screen using a format string %s or %c that includes the instructions to mix several strings and produce the final string to be printed on the screen.
+
+_printf is a special function because it receives a variable number of arguments. The first parameter is fixed and is the format string. It includes text to be printed literaly and marks to be replaced by the text obtained from the additional parameters. Thus, _printf is invoked with as many parameters as marks are included in the format string, plus one (the format string itself).
+
+The symbol % denotes the beginning of a format mark. The mark %d or %i is replaced by the value of variable counter and the resulting string is printed. The symbol \n represents a new line. By default, all output is right-justified, that is, is placed on the right edge of the field and, by default, the width of the field is the same width as the string length.
+
+FORMAT controls the output as in C _printf. Interpreted sequences are:
+
+ \\"
+  double quote
+ \\backslash
+ \\a
+  alert (BEL)
+ \\b
+  backspace
+ \\c
+  produce no further output
+ \\e
+  escape
+ \\f
+  form feed
+ \\n
+  new line
+ \\r
+  carriage return
+ \\t
+  horizontal tab
+ \\v
+  vertical tab
+ \\NNN
+  byte with octal value NNN (1 to 3 digits)
+ \\xHH
+  byte with hexadecimal value HH (1 to 2 digits)
+ \\uHHHH
+  Unicode (ISO/IEC 10646) character with hex value HHHH (4 digits)
+ \\UHHHHHHHH
+  Unicode character with hex value HHHHHHHH (8 digits)
+ \%\%
+  a single %
+
+ \%b
+ ARGUMENT as a string with \\ escapes interpreted, except that octal escapes are of the form \0 or \0NNN
+ and all C format specifications ending with one of diouxXfeEgGcs, with ARGUMENTs converted to proper type first. Variable widths are handled.
+
+.SH OPTIONS
+.IP --help
+ anything help
+.IP --version
+ to know the version printf
+
+.SH SYNOPSIS
+#include "holberton.h"
+
+int _printf(const char *format, ...);
+ _printf FORMAT [ARGUMENT]...
+ _printf OPTION
+ 
+
+.SH AUTHOR
+written by Victor Zuluaga, Cristina Rueda 
+
+.SH COPYRIGHT
+all right reserved Holberton School and students
