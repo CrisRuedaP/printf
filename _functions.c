@@ -1,18 +1,17 @@
 #include "holberton.h"
-
+#include <stdarg.h>
 /**
  * d_type_c - function that print a char
  * @args: arguments
  * Return: 1
  */
-
 int d_type_c(va_list args)
 {
-	char c;
+char c = 0;
 
-	c = va_arg(args, int);
-	_putchar(c);
-	return (1);
+c = va_arg(args, int);
+_putchar(c);
+return (1);
 }
 
 /**
@@ -22,19 +21,20 @@ int d_type_c(va_list args)
  */
 int d_type_s(va_list args)
 {
-	int i = 0;
-	char *str;
+int i = 0;
+char *str;
 
-	str = va_arg(args, char*);
+str = va_arg(args, char*);
 
-	if (str == NULL)
-	{
-	}
-	while (str[i] != '\0')
-	{
-		_putchar(str[i]);
-		str++;
-	}
+if (str == NULL)
+{
+}
+while (str[i] != '\0')
+{
+_putchar(str[i]);
+i++;
+}
+
 return (i);
 }
 
@@ -45,8 +45,8 @@ return (i);
  */
 int d_type_p(va_list args)
 {
-	(void) args;
-	_putchar('%');
+(void) args;
+_putchar('%');
 
 return (1);
 }
@@ -58,52 +58,38 @@ return (1);
  */
 int d_type_i(va_list args)
 {
-
-int i, num, large_num, digit;
-int n, c = 0;
-
-	unsigned int i, num, large_num, digit;
-	int n, c = 0;
-
 int i, num, large_num, digit, n, c = 0;
-
-	n = va_arg(args, int);
-
-	large_num = n;
-	if (n < 0)
-	{
-		c++;
-		large_num = large_num * (-1);
-		putchar('-');
-	}
+n = va_arg(args, int);
 
 large_num = n;
 if (n < 0)
 {
-_putchar('-');
-large_num = large_num * (-1);
 c++;
+large_num = large_num * (-1);
+_putchar('-');
 }
 
-	if (large_num == 0)
-	{
-		c++;
-		_putchar('0');
-		return (c);
-	}	
+if (large_num == 0)
+{
+c++;
+_putchar('0');
+return (c);
+}
 
-	i = 1;
-	while ((large_num / i) > 9)
-	{
-		i = (i * 10);
-	}
-	while (i > 0)
-	{
-		num = (large_num / i);
-		digit = (num % 10);
-		c++;
-		_putchar(digit + '0');
-		i = (i / 10);
-	}
+i = 1;
+while ((large_num / i) > 9)
+{
+i = (i * 10);
+}
+
+while (i > 0)
+{
+num = (large_num / i);
+digit = (num % 10);
+c++;
+_putchar(digit + '0');
+i = (i / 10);
+
+}
 return (c);
 }
