@@ -73,23 +73,23 @@ int d_type_i(va_list args)
 
 	if (large_num == 0)
 	{
-	c++;
-	_putchar('0');
-return (c);
-}
+		c++;
+		_putchar('0');
+		return (c);
+	}	
 
 	i = 1;
 	while ((large_num / i) > 9)
 	{
-	i = (i * 10);
+		i = (i * 10);
 	}
 	while (i > 0)
 	{
-	num = (large_num / i);
-	digit = (num % 10);
-	c++;
-	_putchar(digit + '0');
-	i = (i / 10);
+		num = (large_num / i);
+		digit = (num % 10);
+		c++;
+		_putchar(digit + '0');
+		i = (i / 10);
 	}
 return (c);
 }
