@@ -58,38 +58,29 @@ return (1);
  */
 int d_type_i(va_list args)
 {
-int i, num, large_num, digit, n, c = 0;
-n = va_arg(args, int);
+int n, num, len, large_num;
 
-large_num = n;
+n = va_arg(args, int);
+num = 1;
+len = 0;
+
 if (n < 0)
 {
-c++;
-large_num = large_num * (-1);
-_putchar('-');
+len = len + _putchar('-');
+large_num = n * -1;
 }
-
-if (large_num == 0)
+else
 {
-c++;
-_putchar('0');
-return (c);
+large_num = n;
 }
+while (large_num / num > 9)
+num = num * 10;
 
-i = 1;
-while ((large_num / i) > 9)
+while (num != 0)
 {
-i = (i * 10);
+len = len + _putchar('0' + large_num / num);
+large_num = large_num % num;
+num = num / 10;
 }
-
-while (i > 0)
-{
-num = (large_num / i);
-digit = (num % 10);
-c++;
-_putchar(digit + '0');
-i = (i / 10);
-
-}
-return (c);
+return (len);
 }
