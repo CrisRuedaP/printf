@@ -14,7 +14,7 @@
 typedef struct type
 {
 char *type;
-int (*f)(va_list args);
+int (*f)(va_list);
 
 } dt_t;
 
