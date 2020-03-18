@@ -25,5 +25,4 @@ int d_type_i(va_list args);
 int d_type_d(va_list args);
 int _printf(const char *format, ...);
 int _putchar(char c);
-int _strlen(char *s);
 #endif /* project our own prinf */
