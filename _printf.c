@@ -7,7 +7,7 @@
  */
 int _printf(const char *format, ...)
 {
-int i = 0, j, count = 0;
+int i, j, count = 0;
 va_list args;
 dt_t data_t[] = {
 {"c", d_type_c}, {"s", d_type_s},
@@ -20,8 +20,8 @@ if (format == NULL)
 {
 return (-1);
 }
-
-while (format != '\0' && format[i] != '\0')
+i = 0;
+while (format != NULL && format[i] != '\0')
 {
 if (format[i] == '%')
 {
@@ -33,7 +33,7 @@ return (-1);
 j = 0;
 while (data_t[j].type != NULL)
 {
-if (format[i] == *(data_t[j].type))
+if (*(data_t[j].type) == format[i])
 count += data_t[j].f(args);
 j++;
 }

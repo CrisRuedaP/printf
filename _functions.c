@@ -44,7 +44,7 @@ return (i);
  */
 int d_type_p(va_list args)
 {
-(void) args;
+(void)args;
 _putchar('%');
 
 return (1);
