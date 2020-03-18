@@ -21,7 +21,7 @@ if (format == NULL)
 return (-1);
 }
 
-while (format != '\0' && format[i] != '\0')
+while (format != NULL && format[i] != '\0')
 {
 if (format[i] == '%')
 {

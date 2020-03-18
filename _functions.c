@@ -30,7 +30,10 @@ if (str == NULL)
 str = "(null)";
 
 while (str[i] != '\0')
-i++;
+{
+_putchar(str[i]);
+str++;
+}
 return (i);
 }
 
