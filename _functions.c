@@ -1,5 +1,5 @@
-#include <stdarg.h>
 #include "holberton.h"
+
 /**
  * d_type_c - function that print a char
  * @args: arguments

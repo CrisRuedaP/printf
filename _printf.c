@@ -1,6 +1,5 @@
 #include "holberton.h"
-#include <stdarg.h>
-#include <unistd.h>
+
 /**
  * _printf - function that produces output according to a format.
  * @format: a character string
