@@ -57,29 +57,40 @@ return (1);
  */
 int d_type_i(va_list args)
 {
-int n, num, len, large_num;
+int n, len = 0; 
+unsigned int num, large_num, digit, i;
 
 n = va_arg(args, int);
-num = 1;
-len = 0;
 
+large_num = n;
 if (n < 0)
 {
-len = len + _putchar('-');
-large_num = n * -1;
+len++;
+large_num = large_num * -1;
+_putchar('-');
 }
-else
-{
-large_num = n;
-}
-while (large_num / num > 9)
-num = num * 10;
 
-while (num != 0)
+if (large_num == 0)
 {
-len = len + _putchar('0' + large_num / num);
-large_num = large_num % num;
-num = num / 10;
+len++;
+_putchar('0');
+return (len);
+}
+
+i = 1;
+while ((large_num / i) > 9)
+{
+i = i * 10;
+}
+
+while (i > 0)
+{
+num = large_num / i;
+digit = num % 10;
+len++;
+
+_putchar(digit + '0');
+i = (i / 10);
 }
 return (len);
 }
