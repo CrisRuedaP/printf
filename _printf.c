@@ -24,7 +24,7 @@ return (-1);
 
 while (format != '\0' && format[i] != '\0')
 {
-if (format[i] == '%')
+  if (format[i] == '%')
 {
 i++;
 if (format[i] == '\0')
