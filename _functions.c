@@ -58,21 +58,17 @@ return (1);
  */
 int d_type_i(va_list args)
 {
-<<<<<<< HEAD
-<<<<<<< HEAD
+
 int i, num, large_num, digit;
 int n, c = 0;
-=======
+
 	unsigned int i, num, large_num, digit;
 	int n, c = 0;
->>>>>>> victor
-=======
+
 int i, num, large_num, digit, n, c = 0;
->>>>>>> cristina
 
 	n = va_arg(args, int);
 
-<<<<<<< HEAD
 	large_num = n;
 	if (n < 0)
 	{
@@ -80,7 +76,7 @@ int i, num, large_num, digit, n, c = 0;
 		large_num = large_num * (-1);
 		putchar('-');
 	}
-=======
+
 large_num = n;
 if (n < 0)
 {
@@ -88,7 +84,6 @@ _putchar('-');
 large_num = large_num * (-1);
 c++;
 }
->>>>>>> cristina
 
 	if (large_num == 0)
 	{
