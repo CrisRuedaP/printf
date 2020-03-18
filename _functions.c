@@ -65,7 +65,7 @@ n = va_arg(args, int);
 large_num = n;
 if (n < 0)
 {
-putchar('-');
+_putchar('-');
 large_num = large_num * (-1);
 c++;
 }
