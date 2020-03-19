@@ -2,7 +2,7 @@
 
 /**
  * _printf - function that produces output according to a format.
- * @format: a character string
+ * @format: a character string formatt
  * Return: always 0
  */
 int _printf(const char *format, ...)
