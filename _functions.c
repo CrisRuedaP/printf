@@ -56,7 +56,7 @@ return (1);
  */
 int d_type_i(va_list args)
 {
-int n, len = 0; 
+int n, len = 0;
 unsigned int num, large_num, digit, i;
 
 n = va_arg(args, int);
