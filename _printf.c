@@ -7,14 +7,6 @@
  */
 int _printf(const char *format, ...)
 {
-int i, j, count = 0;
-va_list args;
-dt_t data[] = {
-{"c", d_type_c}, {"s", d_type_s},
-{"%", d_type_p}, {"d", d_type_i},
-{"i", d_type_i}, {NULL, NULL}
-};
-
 va_start(args, format);
 if (format == NULL)
 {
