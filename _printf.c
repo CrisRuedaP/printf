@@ -3,26 +3,25 @@
 /**
  * _printf - function that produces output according to a format.
  * @format: a character string and char
+ * @format: a character string formatt
  * Return: always 0
  */
 int _printf(const char *format, ...)
 {
 va_list args;
-int i = 0, j, count = 0;
-
-dt_t data_t[] = {
+int i, j, count = 0;
+dt_t data[] = {
 {"c", d_type_c}, {"s", d_type_s},
 {"%", d_type_p}, {"d", d_type_i},
-{"i", d_type_i}, {NULL, NULL},
+{"i", d_type_i}, {NULL, NULL}
 };
-
 va_start(args, format);
 if (format == NULL)
 {
 return (-1);
 }
-
-while (format != '\0' && format[i] != '\0')
+i = 0;
+while (format != NULL && format[i] != '\0')
 {
 if (format[i] == '%')
 {
@@ -32,24 +31,20 @@ if (format[i] == '\0')
 return (-1);
 }
 j = 0;
-while (data_t[j].type != NULL)
+while (data[j].type != NULL)
 {
-if (format[i] == *(data_t[j].type))
-{
-count += data_t[j].f(args);
+if (*(data[j].type) == format[i])
+count += data[j].f(args);
 j++;
-}
 }
 i++;
 }
-
 if (format[i] != '%' && format[i] != '\0')
 {
 count += _putchar(format[i]);
 i++;
 }
 }
-
 va_end(args);
 return (count);
 }
