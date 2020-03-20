@@ -2,6 +2,7 @@
 
 /**
  * _printf - function that produces output according to a format.
+ * @format: a character string and char
  * @format: a character string formatt
  * Return: always 0
  */
