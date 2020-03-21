@@ -23,6 +23,8 @@ int d_type_s(va_list args);
 int d_type_p(va_list args);
 int d_type_i(va_list args);
 int d_type_i(va_list args);
+int d_type_r(va_list args);
 int _printf(const char *format, ...);
 int _putchar(char c);
+int _strlen(const char *s);
 #endif /* project our own prinf */
